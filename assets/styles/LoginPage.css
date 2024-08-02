@@ -1,0 +1,69 @@
+#login {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e2a9ca;
+    background: url('../../assets/bg1.jpg') no-repeat center center fixed;
+    background-size: cover; /* Adjusts the image to cover the whole section */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+#loginCard {
+    width: 90%; /* Adjust the width as needed */
+    max-width: 400px; /* Optionally set a max-width for better responsiveness */
+}
+
+.card {
+    width: 100%; /* Ensure card uses full width of its container */
+}
+
+#loginCardBody {
+    width: 100%;
+    display: flex; /* Use flexbox for centering contents */
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+    padding: 20px; /* Adjust padding as needed */
+}
+.mb-3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* Adjust spacing between input fields */
+}
+
+.mb-3 i {
+    margin-right: 0.5rem; /* Adjust spacing between icon and input field */
+}
+#icon1,#icon2{
+    color: orange;
+}
+.form-control {
+    flex: 1; /* Allow the input field to take remaining space */
+    width: auto; /* Ensure it does not stretch unnecessarily */
+}
+#loginBtn{
+    width: 150px;
+    margin-bottom: 20px;
+    background-color: saddlebrown;
+    border: 2px saddlebrown;
+}
+
+#loginPassword,#loginUserName{
+    background-color: orange;
+}
+
+#fp {
+   padding-left: 160px;
+    margin-top: 5px; /* Add margin to adjust position if needed */
+    margin-bottom: 10px; /* Add margin to adjust position if needed */
+    border: none;
+    background-color: white;
+}
+#ca{
+    border: none;
+    background-color: white;
+}
+

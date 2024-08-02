@@ -1,0 +1,148 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+#dashboard {
+    width: 100vw;
+    height: 94vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#header {
+    width: 100vw;
+    height: 80px;
+    background: linear-gradient(to right, orange, #b3cfcd) !important;
+    position: relative; /* Ensure it stays in place */
+}
+
+.nav-item {
+    padding-right: 30px;
+    padding-left: 20px;
+
+
+}
+
+.navbar-toggler {
+    border: none; /* Remove border if any */
+}
+
+.navbar-collapse {
+    transition: none;
+}
+#card1,#card2,#card3,#card4{
+    margin-top: 50px;
+    border-radius: 20px;
+}
+#di1,#di3{
+    color: #b3cfcd;
+}
+#di2,#di4{
+    color: orange;
+}
+#card1Body,#card2Body,#card3Body,#card4Body{
+
+    background: linear-gradient(to right, orange, white, #b3cfcd) !important;
+    background-color: #eeeeee;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    box-shadow:
+            inset 3px 3px 5px rgba(0, 0, 0, 0.2), /* subtle inner shadow */
+            inset -3px -3px 8px rgba(255, 255, 255, 0.9), /* inner white highlight */
+            inset -5px -5px 10px rgba(255, 255, 255, 0.5), /* additional inner white highlight for depth */
+            5px 5px 10px rgba(0, 0, 0, 0.2), /* outer shadow */
+            -5px -5px 10px rgba(255, 255, 255, 0.3); /* outer white highlight */
+}
+.card-text{
+    margin-top: 15px;
+    font-size: 20px;
+}
+#dashTable{
+    margin-top: 40px;
+}
+#slider{
+    width: 250px;
+    height:250px;
+}
+#sliderHolder{
+    width: 1000px;
+    height:300px;
+    margin-top: 40px;
+    border-radius: 10px;
+    margin-left: 15px;
+    background-color: #b3cfcd;
+}
+#c1,#c2{
+    background: linear-gradient(to left, orange, #b3cfcd) !important;
+}
+
+#dashTable1{
+    width: 100%;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+#dashTable1 th.task-col, #dashTable1 td.task-col {
+    width: 20%;
+}
+#dashTable1 th.progress-col, #dashTable1 td.progress-col {
+    width: 80%;
+}
+#dashTable1 th, #dashTable1 td {
+    vertical-align: middle; /* Align text in the middle vertically */
+    height: 60px; /* Adjust the height as needed */
+}
+#dashTable1 .progress {
+    height: 30px; /* Adjust the height of the progress bar */
+}
+/* Define custom progress bar colors */
+.progress-bar-customer-service {
+    background-color: orange !important;
+}
+#sliderText {
+    font-size: 30px; /* Adjust the font size as needed */
+}
+
+#exclusiveOffer {
+    font-size: 22px; /* Adjust the font size as needed */
+}
+
+#shopMore {
+    font-size: 24px; /* Adjust the font size as needed */
+}
+#exclusiveOffer{
+    margin-left: 250px;
+}
+#shopMore{
+    margin-left: 160px;
+}
+
+
+.progress-bar-delivery-speed {
+    background-color: orange !important; /* Teal */
+}
+
+.progress-bar-customer-complains {
+    background-color: orange !important; /* Yellow */
+}
+
+.progress-bar-online-shopping {
+    background-color: orange !important; /* Red */
+}
+
+

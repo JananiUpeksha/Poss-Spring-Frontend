@@ -1,0 +1,45 @@
+#orders {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 250vh;
+    overflow: hidden;
+}
+#addToCart,#placeOrder{
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+#orderRow{
+    width: 100%;
+}
+#orderForm1,#orderForm3,#orderForm2{
+    margin-top: 40px;
+}
+#orderHeader1{
+    background-color: orange;
+}
+#orderHeader2{
+    background: linear-gradient(to right, #b3cfcd, orange);
+}
+#orderHeader3{
+    background-color: #b3cfcd;
+}
+#addToCart{
+    background: linear-gradient(to left, #b3cfcd, orange);
+    border: none;
+    color: black;
+}
+#newOrder{
+    background: linear-gradient(to left, #b3cfcd, orange);
+    border: none;
+    color: black;
+}
+#placeOrder{
+    background: linear-gradient(to left, #b3cfcd, orange);
+    border: none;
+    color: black;
+}
+#orderTable{
+    margin-top: 40px;
+    padding: 0;
+}
