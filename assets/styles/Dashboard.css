@@ -15,7 +15,7 @@ html, body {
 
 #dashboard {
     width: 100vw;
-    height: 94vh;
+    height: auto;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -88,8 +88,13 @@ html, body {
     margin-left: 15px;
     background-color: #b3cfcd;
 }
-#c1,#c2{
+#c1{
     background: linear-gradient(to left, orange, #b3cfcd) !important;
+    margin-top: 20px;
+}
+#c2{
+    background: linear-gradient(to left, orange, #b3cfcd) !important;
+    margin-top: 10px;
 }
 
 #dashTable1{
@@ -145,4 +150,20 @@ html, body {
     background-color: orange !important; /* Red */
 }
 
+
+#header {
+    display: none; /* Hide the navbar by default */
+}
+
+#login, #Account, #fogetPassword {
+    display: block;
+}
+
+#dashboard {
+    display: none;
+}
+
+#last{
+    margin-bottom: 50px;
+}
 
