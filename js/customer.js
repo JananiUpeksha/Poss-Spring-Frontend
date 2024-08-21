@@ -82,12 +82,11 @@ function populateCustomerTable() {
     });
 }
 
-
-
 // Call the function when the document is ready
 $(document).ready(function() {
     populateCustomerDropdown(); // Populate the dropdown when the page loads
     populateCustomerTable();
+
     $('#cusUpdate').on('click', (event) => {
         event.preventDefault(); // Prevent default form submission
         updateCustomer(); // Call the function to update customer
@@ -130,7 +129,7 @@ $(document).ready(function() {
                 $('#cusAddress').val('');
                 $('#cusContact').val('');
 
-                // Re-populate the dropdown to include the new customer
+                // Re-populate the dropdown and table to include the new customer
                 populateCustomerDropdown();
                 populateCustomerTable();
             },
@@ -162,6 +161,12 @@ $(document).ready(function() {
                     alert('Customer deleted successfully');
                     console.log("Response from DELETE request:", res);
 
+                    // Clear the input fields
+                    $('#cusId').val('');
+                    $('#cusName').val('');
+                    $('#cusAddress').val('');
+                    $('#cusContact').val('');
+
                     // Re-populate the dropdown and table to reflect the deletion
                     populateCustomerDropdown();
                     populateCustomerTable();
@@ -173,6 +178,4 @@ $(document).ready(function() {
             });
         }
     });
-
-
 });
