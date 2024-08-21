@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4e456086-aee9-47bc-867c-5feec615984d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/customer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -42,7 +44,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/janani/Desktop/connect-four-game-assignment&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/janani/IdeaProjects/EE-Frontend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -74,6 +76,9 @@
       <workItem from="1724143109072" duration="1160000" />
       <workItem from="1724149813612" duration="1478000" />
       <workItem from="1724156393997" duration="51000" />
+      <workItem from="1724171852808" duration="2668000" />
+      <workItem from="1724210847901" duration="1146000" />
+      <workItem from="1724223196625" duration="1281000" />
     </task>
     <servers />
   </component>
