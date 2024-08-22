@@ -124,6 +124,12 @@ $(document).ready(function() {
                 alert('Customer updated successfully');
                 console.log("Response from PUT request:", res);
 
+                // Clear the input fields after successful save
+                $('#cusId').val('');
+                $('#cusName').val('');
+                $('#cusAddress').val('');
+                $('#cusContact').val('');
+
                 // Re-populate the dropdown and table to reflect the updated customer
                 populateCustomerDropdown();
                 populateCustomerTable();

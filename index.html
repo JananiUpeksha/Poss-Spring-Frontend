@@ -206,7 +206,7 @@
             </div>
         </div>
 
-        <div class="row">
+      <!--  <div class="row">
             <div class="col-xl-4 col-lg-4 col-sm-12 col-12" style="margin-top: 40px;">
                 <div class="card" style="width: 30rem; text-align: center; height: 200px; border-radius: 20px" id="c2">
                     <div class="card-body" style="text-align: center;">
@@ -218,7 +218,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
 
         <div class="row" id="last">
@@ -418,9 +418,10 @@
                         <form>
                             <div class="mb-3">
                                 <div class="text-end dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" id="itemIDs" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-secondary dropdown-toggle" id="itemDropdownToggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Search Item
                                     </button>
+                                    <ul class="dropdown-menu" aria-labelledby="itemDropdownToggle"></ul>
                                 </div>
                             </div>
 
@@ -471,10 +472,10 @@
                 <table class="table table-light table-striped-columns" id="itemTable">
                     <thead>
                     <tr>
-                        <th scope="col">Customer ID</th>
-                        <th scope="col">Customer Name</th>
-                        <th scope="col">Customer Address</th>
-                        <th scope="col">Customer Contact</th>
+                        <th scope="col">Item ID</th>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Item Price</th>
+                        <th scope="col">Item Quantity</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -773,5 +774,7 @@
 
 </script>
 <script type="module" src="js/customer.js"></script>
+<script type="module" src="js/item.js"></script>
+<script type="module" src="js/dashboard.js"></script>
 </body>
 </html>
