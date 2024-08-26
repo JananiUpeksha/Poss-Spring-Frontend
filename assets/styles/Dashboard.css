@@ -54,7 +54,7 @@ html, body {
 }
 #card1Body,#card2Body,#card3Body,#card4Body{
 
-    background: linear-gradient(to right, orange, white, #b3cfcd) !important;
+    background: linear-gradient(to bottom, orange, white, #b3cfcd) !important;
     background-color: #eeeeee;
     text-align: center;
     display: flex;

@@ -156,61 +156,58 @@ $(document).ready(function() {
         console.log("Selected date format (YYYY-MM-DD):", selectedDate);
     });
 
-    // Handler for Place Order button
     $('#placeOrder').on('click', function(event) {
         event.preventDefault(); // Prevent form submission
 
         // Validate the date field
         const orderDate = $('#oDate').val();
-        console.log("Order Date:", orderDate);
         if (!orderDate) {
             alert('Please select a date for the order.');
             return;
         }
 
         const orderData = {
-            orderId: $('#oId').val(),
-            orderDate: orderDate,
-            customerId: $('#cus1').val(),
-            items: [],
-            netTotal: netTotal.toFixed(2),
-            cash: parseFloat($('#order2').val()).toFixed(2),
-            discount: discount.toFixed(2),
-            balance: parseFloat($('#order3').val()).toFixed(2)
+            customerId: $('#cus1').val(),  // Set customer ID from dropdown
+            total: parseFloat(netTotal).toFixed(2),  // Ensure netTotal is formatted as a float
+            date: orderDate,  // Use the correct date format
+            itemDtoList: []  // Initialize the itemDtoList array
         };
 
         // Collect all items from the table
         $('#orderTable tbody tr').each(function() {
             const row = $(this);
-            const itemId = row.find('td:eq(0)').text();
-            const orderQty = row.find('td:eq(3)').text();
-            const total = row.find('td:eq(4)').text();
+            const itemId = row.find('td:eq(0)').text();  // Fetch item ID
+            const itemName = row.find('td:eq(1)').text();  // Fetch item name
+            const itemPrice = parseFloat(row.find('td:eq(2)').text());  // Fetch item price
+            const orderQty = row.find('td:eq(3)').text();  // Fetch order quantity
 
-            orderData.items.push({
-                itemId: itemId,
-                orderQty: orderQty,
-                total: total
+            orderData.itemDtoList.push({
+                id: itemId,  // Set item ID
+                name: itemName,  // Set item name
+                price: itemPrice,  // Set item price
+                qty: orderQty  // Set item quantity
             });
         });
-        console.log("Order Data:", JSON.stringify(orderData));
 
-        // Send order data to the server
+        console.log("Order Data:", JSON.stringify(orderData));  // Log the order data for debugging
+
+        // Send the order data to the server
         $.ajax({
-            url: "http://localhost:8080/order",
-            type: "POST",
-            contentType: "application/json",
-            data: JSON.stringify(orderData),
-            success: (response) => {
-                alert('Order placed successfully!');
-                // Optionally, you can clear the form or redirect to another page
-                resetOrderForm();
+            url: "http://localhost:8080/order",  // Set the correct endpoint
+            type: "POST",  // Set the HTTP method
+            contentType: "application/json",  // Set the content type to JSON
+            data: JSON.stringify(orderData),  // Convert order data to JSON string
+            success: function(response) {
+                alert('Order placed successfully!');  // Alert success
+                resetOrderForm();  // Reset the form after successful submission
             },
-            error: (res) => {
-                alert('Failed to place the order. Please try again.');
-                console.error("Error placing order:", res.status, res.statusText);
+            error: function(res) {
+                alert('Failed to place the order. Please try again.');  // Alert failure
+                console.error("Error placing order:", res.status, res.statusText);  // Log error details
             }
         });
     });
+
 
 
     // Function to reset the order form
