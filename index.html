@@ -515,17 +515,25 @@
                     <div class="card-body">
                         <form>
                             <div class="text-end dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" id="orderCus" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Search Customer
+                                <!-- Dropdown Toggle Button -->
+                                <button class="btn btn-secondary dropdown-toggle" id="dropdownCustomerButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Select Customer
                                 </button>
+
+                                <!-- Dropdown Menu -->
+                                <ul class="dropdown-menu" id="customerDropdownMenu">
+                                    <!-- Customer items will be populated here -->
+                                </ul>
                             </div>
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <!-- Row 1 -->
                                     <div class="form-group">
                                         <label for="oId" class="form-label">Order ID</label>
-                                        <input type="text" class="form-control" id="oId" >
+                                        <input type="text" class="form-control" id="oId">
                                     </div>
+
                                     <!-- Row 2 -->
                                     <div class="form-group">
                                         <label for="cus1" class="form-label">Customer ID</label>
@@ -541,7 +549,8 @@
                                     <!-- Row 1 -->
                                     <div class="form-group">
                                         <label for="oDate" class="form-label">Order Date</label>
-                                        <input type="text" class="form-control" id="oDate" >
+                                        <input type="date" class="form-control" id="oDate">
+
                                     </div>
                                     <!-- Row 2 -->
                                     <div class="form-group">
@@ -568,10 +577,17 @@
                     <div class="card-body">
                         <form>
                             <div class="text-end dropdown">
+                                <!-- Dropdown Toggle Button -->
                                 <button class="btn btn-secondary dropdown-toggle" id="itemIDsz" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Search Item
                                 </button>
+
+                                <!-- Dropdown Menu -->
+                                <ul class="dropdown-menu" id="itemDropdownMenu">
+                                    <!-- Item options will be populated here -->
+                                </ul>
                             </div>
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <!-- Row 1 -->
@@ -669,38 +685,13 @@
             <tr>
                 <th scope="col">Item ID</th>
                 <th scope="col">Item Name</th>
-                <th scope="col">Qty On Hand</th>
                 <th scope="col">Item Price</th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Total</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>Mark</td>
-                <td>Otto</td>
 
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-            </tr>
             </tbody>
         </table>
     </div>
