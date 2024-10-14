@@ -5,7 +5,7 @@ $(document).ready(function() {
 
     // Handle the save button click
     $('#cusSave').on('click', function(event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault();
 
         // Collect the input values
         var name = $('#cusName').val();
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
         // Send the data with AJAX
         $.ajax({
-            url: "http://localhost:8080/customer", // Adjust the URL if necessary
+            url: "http://localhost:8080/api/v1/customer", // Updated URL
             type: "POST",
             data: jsonCustomer,
             contentType: "application/json",
@@ -32,12 +32,12 @@ $(document).ready(function() {
                 alert('Customer saved successfully');
                 console.log("Response from POST request:", res);
 
-                // Clear the input fields after successful save
+                // Clear the input fields
                 $('#cusName').val('');
                 $('#cusAddress').val('');
                 $('#cusContact').val('');
 
-                // Re-populate the dropdown and table to include the new customer
+                // Re-populate the dropdown and table
                 populateCustomerDropdown();
                 populateCustomerTable();
             },
@@ -50,7 +50,7 @@ $(document).ready(function() {
 
     // Handle the delete button click
     $('#cusDelete').on('click', function(event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault();
 
         // Get the selected customer ID from the input field
         var customerID = $('#cusId').val();
@@ -63,7 +63,7 @@ $(document).ready(function() {
         // Confirm the deletion
         if (confirm('Are you sure you want to delete this customer?')) {
             $.ajax({
-                url: `http://localhost:8080/customer?id=${customerID}`, // URL to send DELETE request
+                url: `http://localhost:8080/api/v1/customer/${customerID}`, // Updated URL
                 type: "DELETE",
                 success: (res) => {
                     alert('Customer deleted successfully');
@@ -75,7 +75,7 @@ $(document).ready(function() {
                     $('#cusAddress').val('');
                     $('#cusContact').val('');
 
-                    // Re-populate the dropdown and table to reflect the deletion
+                    // Re-populate the dropdown and table
                     populateCustomerDropdown();
                     populateCustomerTable();
                 },
@@ -89,7 +89,7 @@ $(document).ready(function() {
 
     // Handle the update button click
     $('#cusUpdate').on('click', function(event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault();
 
         // Get the customer ID from the input field
         var customerId = $('#cusId').val();
@@ -116,7 +116,7 @@ $(document).ready(function() {
 
         // Send the updated data with AJAX
         $.ajax({
-            url: `http://localhost:8080/customer?id=${customerId}`, // Adjust the URL as necessary
+            url: `http://localhost:8080/api/v1/customer/${customerId}`, // Updated URL
             type: "PUT",
             data: jsonUpdatedCustomer,
             contentType: "application/json",
@@ -124,13 +124,13 @@ $(document).ready(function() {
                 alert('Customer updated successfully');
                 console.log("Response from PUT request:", res);
 
-                // Clear the input fields after successful save
+                // Clear the input fields
                 $('#cusId').val('');
                 $('#cusName').val('');
                 $('#cusAddress').val('');
                 $('#cusContact').val('');
 
-                // Re-populate the dropdown and table to reflect the updated customer
+                // Re-populate the dropdown and table
                 populateCustomerDropdown();
                 populateCustomerTable();
             },
@@ -144,7 +144,7 @@ $(document).ready(function() {
     // Function to populate the customer dropdown
     function populateCustomerDropdown() {
         $.ajax({
-            url: "http://localhost:8080/customer", // URL to get all customers
+            url: "http://localhost:8080/api/v1/customer", // Updated URL
             type: "GET",
             dataType: "json",
             success: (data) => {
@@ -167,7 +167,7 @@ $(document).ready(function() {
                     $('#customerID').text(customerName);
                     $('#cusId').val(customerId);
 
-                    // Fetch and populate customer details from the list
+                    // Fetch and populate customer details
                     fetchAndPopulateCustomerDetails(data, customerId);
                 });
             },
@@ -179,7 +179,6 @@ $(document).ready(function() {
 
     // Function to filter and display customer details
     function fetchAndPopulateCustomerDetails(customers, customerId) {
-        // Find the customer by ID
         const customer = customers.find(c => c.id == customerId);
 
         if (customer) {
@@ -198,7 +197,7 @@ $(document).ready(function() {
     // Function to populate the customer table
     function populateCustomerTable() {
         $.ajax({
-            url: "http://localhost:8080/customer", // URL to get all customers
+            url: "http://localhost:8080/api/v1/customer", // Updated URL
             type: "GET",
             dataType: "json",
             success: (data) => {

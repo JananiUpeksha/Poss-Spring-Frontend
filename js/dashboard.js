@@ -2,7 +2,7 @@ $(document).ready(function() {
     // Function to populate the customer table on the dashboard
     function populateCustomerTableOnDashboard() {
         $.ajax({
-            url: "http://localhost:8080/customer", // URL to get all customers
+            url: "http://localhost:8080/api/v1/customer", // URL to get all customers
             type: "GET",
             dataType: "json",
             success: (data) => {

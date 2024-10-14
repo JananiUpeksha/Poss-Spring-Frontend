@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4e456086-aee9-47bc-867c-5feec615984d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/item.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/item.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/orders.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +47,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/janani/IdeaProjects/EE-Frontend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/janani/IdeaProjects/Spring-Frontend &quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -87,6 +89,13 @@
       <workItem from="1724593527641" duration="4892000" />
       <workItem from="1724651318221" duration="2126000" />
       <workItem from="1724661953755" duration="8644000" />
+      <workItem from="1724688301052" duration="2690000" />
+      <workItem from="1724728086669" duration="281000" />
+      <workItem from="1724731917942" duration="55000" />
+      <workItem from="1724733240878" duration="215000" />
+      <workItem from="1728446481883" duration="2248000" />
+      <workItem from="1728578598349" duration="604000" />
+      <workItem from="1728825922486" duration="1243000" />
     </task>
     <servers />
   </component>

@@ -11,7 +11,7 @@ $(document).ready(function() {
     // Function to populate the customer dropdown
     function populateCustomerDropdown() {
         $.ajax({
-            url: "http://localhost:8080/customer",
+            url: "http://localhost:8080/api/v1/customer",
             type: "GET",
             dataType: "json",
             success: (data) => {
@@ -47,7 +47,7 @@ $(document).ready(function() {
     // Function to populate the item dropdown
     function populateItemDropdown() {
         $.ajax({
-            url: "http://localhost:8080/item",
+            url: "http://localhost:8080/api/v1/item",
             type: "GET",
             dataType: "json",
             success: (data) => {
@@ -170,22 +170,18 @@ $(document).ready(function() {
             customerId: $('#cus1').val(),  // Set customer ID from dropdown
             total: parseFloat(netTotal).toFixed(2),  // Ensure netTotal is formatted as a float
             date: orderDate,  // Use the correct date format
-            itemDtoList: []  // Initialize the itemDtoList array
+            orderItems: []  // Initialize the orderItems array
         };
 
         // Collect all items from the table
         $('#orderTable tbody tr').each(function() {
             const row = $(this);
             const itemId = row.find('td:eq(0)').text();  // Fetch item ID
-            const itemName = row.find('td:eq(1)').text();  // Fetch item name
-            const itemPrice = parseFloat(row.find('td:eq(2)').text());  // Fetch item price
-            const orderQty = row.find('td:eq(3)').text();  // Fetch order quantity
+            const orderQty = parseInt(row.find('td:eq(3)').text(), 10);  // Fetch order quantity
 
-            orderData.itemDtoList.push({
-                id: itemId,  // Set item ID
-                name: itemName,  // Set item name
-                price: itemPrice,  // Set item price
-                qty: orderQty  // Set item quantity
+            orderData.orderItems.push({
+                itemId: itemId,  // Set item ID
+                quantity: orderQty  // Set item quantity
             });
         });
 
@@ -193,7 +189,7 @@ $(document).ready(function() {
 
         // Send the order data to the server
         $.ajax({
-            url: "http://localhost:8080/order",  // Set the correct endpoint
+            url: "http://localhost:8080/api/v1/order",  // Set the correct endpoint
             type: "POST",  // Set the HTTP method
             contentType: "application/json",  // Set the content type to JSON
             data: JSON.stringify(orderData),  // Convert order data to JSON string
@@ -207,8 +203,6 @@ $(document).ready(function() {
             }
         });
     });
-
-
 
     // Function to reset the order form
     function resetOrderForm() {
